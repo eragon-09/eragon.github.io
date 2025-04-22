@@ -3,7 +3,7 @@
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>  
   </requires>
-  <extension point="xbmc.addon.repository" name="[COLORred]E[COLORblue]ra[COLORyellow]gon-09[/COLOR]">
+  <extension point="xbmc.addon.repository" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]">
     <dir>
     <info compressed="true">https://raw.github.com/eragon-09/eragon-09.github.io/master/addons.xml</info>
     <checksum>https://raw.github.com/eragon-09/eragon-09.github.io/master/addons.xml.md5</checksum>

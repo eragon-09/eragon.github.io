@@ -676,6 +676,27 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
+<addon id="plugin.video.titan.playlistloader" name="Playlist Loader" version="0.1" provider-name="[COLORyellow ]Titan[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Titan PlaylistLoader</summary>
+    <summary lang="de_DE">Titan PlaylistLoader</summary>
+<description lang="de_DE">Wir weisen darauf hin, dass illegale Addons im machen Ländern gegen geltendes Recht § verstossen können und strafbar ist. Die Nutzung und Anwendung dieser Addons obliegt allein bei dem jeweiligen Benutzer des Addons. Das [COLORred]TiTan PlaylistLoader[/COLOR] Team übernimmt daher keine Haftung ! Eine Weitergabe an Dritte / nicht authorisierte Personen ist strengstens untersagt !!!! ...</description>
+    <language>en de</language>
+    <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="plugin.video.titan.portal" name="[COLOR orange]Titan[COLOR yellow] Portal[/COLOR]" version="1.0.3" provider-name="[COLOR orange]TITAN[/COLOR]">
 <requires>
     	<!--<import addon="script.module.resolveurl" /> -->

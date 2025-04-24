@@ -39,9 +39,9 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="de">Eragon Repository</summary>
   <description lang="de">
-    Bitte stellen Sie dieses Repository nicht ins Internet. Vielen Dank für Ihr Verständnis und Ihre Rücksichtnahme.
+    Bitte stellen Sie dieses Repository nicht ins Internet. Vielen Dank fÃ¼r Ihr VerstÃ¤ndnis und Ihre RÃ¼cksichtnahme.
   </description>
-  <disclaimer lang="de">Bitte, die Repo nicht veröffentlichen.</disclaimer>
+  <disclaimer lang="de">Bitte, die Repo nicht verÃ¶ffentlichen.</disclaimer>
   <assets>
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>

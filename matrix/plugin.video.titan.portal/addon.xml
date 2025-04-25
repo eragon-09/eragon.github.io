@@ -1,5 +1,5 @@
 <?xml version="0.1" encoding="UTF-8"?>
-<addon id="plugin.video.titan.portal" name="[COLOR orange]Titan[COLOR yellow] Portal[/COLOR]" version="1.0.3" provider-name="[COLOR orange]TITAN[/COLOR]">
+<addon id="plugin.video.titan.portal" name="[COLOR orange]TiTan[COLOR yellow] Portal[/COLOR]" version="1.0.3" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 <requires>    		
     	<!--<import addon="script.module.resolveurl" /> -->
         <import addon="script.module.requests"/>	
@@ -15,7 +15,7 @@
         <platform>all</platform>
 		<summary lang="en">[COLOR gold]Nur das Beste!!![/COLOR] </summary>
 	<platform>all</platform>
-		<description lang="en">[COLOR lime]Titan[/COLOR][COLOR red] Portal[/COLOR] ist ein Addon von [COLOR lime]Titan Builds Team.[/COLOR] Das Titan Portal Addon ist ein exklusives Tool, das für persönliche Nutzung entwickelt wurde.[COLOR red] Bitte teilt dieses Addon nicht mit anderen, um die Integrität und Funktionalität zu gewährleisten. Euer Verständnis und eure Rücksichtnahme sind sehr geschätzt. Vielen Dank![/COLOR]</description>
+		<description lang="en">[COLOR orange]TiTan[/COLOR][COLOR red] Portal[/COLOR] ist ein Addon von [COLOR lime]Titan Builds Team.[/COLOR] Das Titan Portal Addon ist ein exklusives Tool, das für persönliche Nutzung entwickelt wurde.[COLOR red] Bitte teilt dieses Addon nicht mit anderen, um die Integrität und Funktionalität zu gewährleisten. Euer Verständnis und eure Rücksichtnahme sind sehr geschätzt. Vielen Dank![/COLOR]</description>
 	<assets>
 		<icon>icon.png</icon>
 	   <fanart>fanart.jpg</fanart>

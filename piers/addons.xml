@@ -116,41 +116,7 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="plugin.video.titan.tv" name="[COLOR orange]Titan[/COLOR]" version="0.4" provider-name="[COLORyellow ]Titan[/COLOR]">
-	<requires>
-		<import addon="xbmc.python" version="3.0.1"/>
-		<import addon="script.module.requests" version="2.27.1"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon_entry.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service_entry.py"/>
-	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>true</reuselanguageinvoker>
-		<platform>all</platform>
-		<summary lang="en_GB">[COLORorange ]Titan[/COLOR]</summary>
-		<description lang="en_GB">[COLORskyblue]Titan fÃ¼r den Zugriff auf Videos und Vod-Demand-KanÃ¤le und -Serien[/COLOR]</description>
-		<license>GPL-3.0-or-later</license>
-		<language>en</language>
-		<assets>
-		<icon>resources/media/icon.png</icon>
-		<icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-			<screenshot>resources/media/screenshot_1.png</screenshot>
-			<screenshot>resources/media/screenshot_2.png</screenshot>
-			<screenshot>resources/media/screenshot_3.png</screenshot>
-			<screenshot>resources/media/screenshot_4.png</screenshot>
-		</assets>
-		<news>
- HauptversionsverÃ¶ffentlichung mit Umgestaltung der MenÃ¼optionen.   PortalunterstÃ¼tzung mit separater MenÃ¼option fÃ¼r Serien.
-  Wenn Sie die Kodi-Option â€žZu Favoriten hinzufÃ¼genâ€œ verwenden, wird der vorhandene Favoriten-Link unterbrochen.
-  MÃ¶glichkeit, die Portal-Favoritenoption fÃ¼r VOD und TV-KanÃ¤le zu verwenden
-  FÃ¼gen Sie UnterstÃ¼tzung fÃ¼r das UpNext-Add-on hinzu.
-		</news>
-	</extension>
-</addon>
-
-<addon id="plugin.video.titan.iptv" name="[COLOR orange][B]TiTan[/COLOR][COLOR red] IPTV [/B][/COLOR]" version="1.1.2" provider-name="[COLORyellow]TiTan   [COLORred]TV [COLORblue]Team[/COLOR]">
+<addon id="plugin.video.titan.iptv" name="[COLOR orange][B]TiTan[/COLOR][COLOR red] IPTV [/B][/COLOR]" version="1.1.2" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" version="2.25.1+matrix.1"/>
@@ -193,7 +159,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="plugin.video.titan.portal" name="[COLOR orange]Titan[COLOR yellow] Portal[/COLOR]" version="1.0.3" provider-name="[COLOR orange]TITAN[/COLOR]">
+<addon id="plugin.video.titan.portal" name="[COLOR orange]TiTan[COLOR yellow] Portal[/COLOR]" version="1.0.3" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 <requires>
     	<!--<import addon="script.module.resolveurl" /> -->
         <import addon="script.module.requests"/>
@@ -209,7 +175,7 @@ provider-name="jurialmunkey">
         <platform>all</platform>
 		<summary lang="en">[COLOR gold]Nur das Beste!!![/COLOR] </summary>
 	<platform>all</platform>
-		<description lang="en">[COLOR lime]Titan[/COLOR][COLOR red] Portal[/COLOR] ist ein Addon von [COLOR lime]Titan Builds Team.[/COLOR] Das Titan Portal Addon ist ein exklusives Tool, das fÃ¼r persÃ¶nliche Nutzung entwickelt wurde.[COLOR red] Bitte teilt dieses Addon nicht mit anderen, um die IntegritÃ¤t und FunktionalitÃ¤t zu gewÃ¤hrleisten. Euer VerstÃ¤ndnis und eure RÃ¼cksichtnahme sind sehr geschÃ¤tzt. Vielen Dank![/COLOR]</description>
+		<description lang="en">[COLOR orange]TiTan[/COLOR][COLOR red] Portal[/COLOR] ist ein Addon von [COLOR lime]Titan Builds Team.[/COLOR] Das Titan Portal Addon ist ein exklusives Tool, das fÃ¼r persÃ¶nliche Nutzung entwickelt wurde.[COLOR red] Bitte teilt dieses Addon nicht mit anderen, um die IntegritÃ¤t und FunktionalitÃ¤t zu gewÃ¤hrleisten. Euer VerstÃ¤ndnis und eure RÃ¼cksichtnahme sind sehr geschÃ¤tzt. Vielen Dank![/COLOR]</description>
 	<assets>
 		<icon>icon.png</icon>
 	   <fanart>fanart.jpg</fanart>
@@ -218,6 +184,41 @@ provider-name="jurialmunkey">
 	   <media>resources/medias/series.jpg</media>
 	</assets>
   </extension>
+</addon>
+
+<addon id="plugin.video.titan.tv" name="[COLOR orange]TiTan[/COLOR] [COLORred]TV[/COLOR]" version="0.4" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+	<requires>
+		<import addon="xbmc.python" version="3.0.1"/>
+		<import addon="script.module.requests" version="2.27.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon_entry.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service_entry.py"/>
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<platform>all</platform>
+		<summary lang="en_GB">[COLORorange ]TiTan[/COLOR]</summary>
+		<description lang="de">[COLORskyblue]TiTan fÃ¼r den Zugriff auf Videos und Vod-Demand-KanÃ¤le und -Serien[/COLOR][COLORred]
+[B]Hinweis:[/B][/COLOR] Wir weisen darauf hin, dass die Nutzung von mancher Addons in bestimmten LÃ¤ndern gegen geltendes Recht verstoÃŸen kann und strafbar ist. Die Verantwortung fÃ¼r die Anwendung dieser Addons liegt ausschlieÃŸlich beim jeweiligen Benutzer. Das [COLORorange]TiTan[/COLOR] [COLORblue]Team[/COLOR] Ã¼bernimmt daher keinerlei Haftung fÃ¼r etwaige rechtliche Konsequenzen. Eine Weitergabe der Addons an Dritte oder nicht autorisierte Personen ist strengstens untersagt. Vielen Dank fÃ¼r Ihr VerstÃ¤ndnis!!!!</description>
+		<license>GPL-3.0-or-later</license>
+		<language>en</language>
+		<assets>
+		<icon>resources/media/icon.png</icon>
+		<icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+			<screenshot>resources/media/screenshot_1.png</screenshot>
+			<screenshot>resources/media/screenshot_2.png</screenshot>
+			<screenshot>resources/media/screenshot_3.png</screenshot>
+			<screenshot>resources/media/screenshot_4.png</screenshot>
+		</assets>
+		<news>
+ HauptversionsverÃ¶ffentlichung mit Umgestaltung der MenÃ¼optionen.   PortalunterstÃ¼tzung mit separater MenÃ¼option fÃ¼r Serien.
+  Wenn Sie die Kodi-Option â€žZu Favoriten hinzufÃ¼genâ€œ verwenden, wird der vorhandene Favoriten-Link unterbrochen.
+  MÃ¶glichkeit, die Portal-Favoritenoption fÃ¼r VOD und TV-KanÃ¤le zu verwenden
+  FÃ¼gen Sie UnterstÃ¼tzung fÃ¼r das UpNext-Add-on hinzu.
+		</news>
+	</extension>
 </addon>
 
 <addon id="plugin.video.titan.x-codes" name="[COLOR yellow]TITAN-[COLOR chocolate]X[/COLOR][COLORwhite]-[/COLOR][COLORgold]Codes[/COLOR]" version="2.6" provider-name="[COLOR red]TI[/COLOR][COLORdarkgrey]Tan[/COLOR]">
@@ -268,7 +269,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.eragon" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]" version="2.4" provider-name="[COLOR red]Era[COLORgold]gon[/COLOR]">
+<addon id="repository.eragon" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]" version="2.4" provider-name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
@@ -306,10 +307,11 @@ provider-name="jurialmunkey">
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="de">Eragon Repository</summary>
-  <description lang="de">
-    Bitte stellen Sie dieses Repository nicht ins Internet. Vielen Dank fÃ¼r Ihr VerstÃ¤ndnis und Ihre RÃ¼cksichtnahme.
+  <description lang="de">[COLORsnow][B]** Weisheit der Drachen, sortiert und bereit, willkommen im [COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR][COLORsnow] Repository **[/B][/COLOR]
+[COLORred][B]Wichtig:[/B][/COLOR] Bitte beachten Sie, dass dieses Repository vertraulich ist und nicht im Internet verÃ¶ffentlicht werden sollte. Ihre RÃ¼cksichtnahme und Ihr VerstÃ¤ndnis sind entscheidend, um die IntegritÃ¤t unserer Arbeit zu wahren. Vielen Dank fÃ¼r Ihre Kooperation!
+
   </description>
-  <disclaimer lang="de">Bitte, die Repo nicht verÃ¶ffentlichen.</disclaimer>
+  <disclaimer lang="de">Bitte, die Repository nicht verÃ¶ffentlichen.</disclaimer>
   <assets>
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>

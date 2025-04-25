@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.eragon" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]" version="2.4" provider-name="[COLOR red]Era[COLORgold]gon[/COLOR]">
+<addon id="repository.eragon" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]" version="2.4" provider-name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>  
   </requires>
@@ -37,10 +37,11 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="de">Eragon Repository</summary>
-  <description lang="de">
-    Bitte stellen Sie dieses Repository nicht ins Internet. Vielen Dank für Ihr Verständnis und Ihre Rücksichtnahme.
+  <description lang="de">[COLORsnow][B]** Weisheit der Drachen, sortiert und bereit, willkommen im [COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR][COLORsnow] Repository **[/B][/COLOR]
+[COLORred][B]Wichtig:[/B][/COLOR] Bitte beachten Sie, dass dieses Repository vertraulich ist und nicht im Internet veröffentlicht werden sollte. Ihre Rücksichtnahme und Ihr Verständnis sind entscheidend, um die Integrität unserer Arbeit zu wahren. Vielen Dank für Ihre Kooperation!
+   
   </description>
-  <disclaimer lang="de">Bitte, die Repo nicht veröffentlichen.</disclaimer>
+  <disclaimer lang="de">Bitte, die Repository nicht veröffentlichen.</disclaimer>
   <assets>
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>

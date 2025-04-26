@@ -770,7 +770,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="plugin.video.titan.tv" name="[COLOR orange]TiTan[/COLOR] [COLORred]TV[/COLOR]" version="0.4" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+<addon id="plugin.video.titan.tv" name="[COLOR orange]TiTan[/COLOR] [COLORred]TV[/COLOR]" version="0.5" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 		<import addon="script.module.requests" version="2.27.1"/>

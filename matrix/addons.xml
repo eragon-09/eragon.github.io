@@ -700,7 +700,7 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="plugin.video.titan.playlistloader" name="Playlist Loader" version="0.2" provider-name="[COLORyellow ]Titan[/COLOR]">
+<addon id="plugin.video.titan.playlistloader" name="[COLOR orange]TiTan[COLOR yellow] Playlist Loader[/COLOR]" version="0.3" provider-name="[COLORyellow ]Titan[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" version="2.22.0"/>

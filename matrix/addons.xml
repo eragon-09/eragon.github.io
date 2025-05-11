@@ -639,6 +639,26 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
+<addon id="script.xstream.settings.saver" name="xStream Settings Saver" version="21.2" provider-name="mr.Python">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+	<summary lang="de"></summary>
+    <description lang="en"></description>
+	<description lang="de">Speicher deine xStream Einstellungen und stelle diese wieder her...</description>
+    <license>The MIT License</license>
+    <platform>all</platform>
+		<assets>
+            <icon>icon.jpg</icon>
+            <fanart>fanart.jpg</fanart>
+		</assets>
+    <language></language>
+  </extension>
+</addon>
+
 <addon id="service.script.update" name="Update Service disney" version="2.2" provider-name="flechanegra">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>

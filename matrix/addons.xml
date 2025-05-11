@@ -138,7 +138,7 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="plugin.video.titan.playlistloader" name="Playlist Loader" version="0.1" provider-name="[COLORyellow ]Titan[/COLOR]">
+<addon id="plugin.video.titan.playlistloader" name="[COLOR orange]TiTan[COLOR yellow] Playlist Loader[/COLOR]" version="0.3" provider-name="[COLORyellow ]Titan[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" version="2.22.0"/>
@@ -159,7 +159,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="plugin.video.titan.portal" name="[COLOR orange]TiTan[COLOR yellow] Portal[/COLOR]" version="1.0.3" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+<addon id="plugin.video.titan.portal" name="[COLOR orange]TiTan[COLOR yellow] Portal[/COLOR]" version="1.0.4" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 <requires>
     	<!--<import addon="script.module.resolveurl" /> -->
         <import addon="script.module.requests"/>
@@ -186,7 +186,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="plugin.video.titan.tv" name="[COLOR orange]TiTan[/COLOR] [COLORred]TV[/COLOR]" version="0.4" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+<addon id="plugin.video.titan.tv" name="[COLOR orange]TiTan[/COLOR] [COLORred]TV[/COLOR]" version="0.5" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 		<import addon="script.module.requests" version="2.27.1"/>
@@ -221,7 +221,7 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="plugin.video.titan.x-codes" name="[COLOR yellow]TiTan-[COLOR chocolate]X[/COLOR][COLORwhite]-[/COLOR][COLORgold]Codes[/COLOR]" version="2.6" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+<addon id="plugin.video.titan.x-codes" name="[COLOR yellow]TiTan-[COLOR chocolate]X[/COLOR][COLORwhite]-[/COLOR][COLORgold]Codes[/COLOR]" version="2.7" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 <requires>
 		<import addon="script.module.requests" version="2.27.1"/>
 	</requires>
@@ -269,7 +269,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.eragon" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]" version="2.4" provider-name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]">
+<addon id="repository.eragon" name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]" version="2.5" provider-name="[COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR]">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>

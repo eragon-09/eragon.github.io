@@ -1,5 +1,5 @@
 ERAGON REPOSITORY
-# Current Version: 2.4
+# Current Version: 2.5
 Instructions for adding this repo:
 
 
@@ -9,7 +9,7 @@ Instructions for adding this repo:
     <li>Click on "Add Source"</li>
 	<li>The address for the source is <code>https://eragon-09.github.io/</code>(Pray the name of "ERAGON Repo")</li>
 	<li>Go to "Addons"</li>
-	<li>In Addons, install from a zip file. When asking for the location, select "ERAGON Repo", and install<a href="repository.eragon-2.4.zip">repository.eragon-2.4.zip</a>.</li>
+	<li>In Addons, install from a zip file. When asking for the location, select "ERAGON Repo", and install<a href="repository.eragon-2.5.zip">repository.eragon-2.5.zip</a>.</li>
 	<li>Back to Addons, but this time select "Install of repository"</li>
 	<li>Select the "Eragon Repository"</li>
 	

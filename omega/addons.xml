@@ -24,7 +24,7 @@
 
 <addon id="plugin.video.nebelkindmusic"
 	name="[B][COLOR skyblue]Nebelkind[/COLOR][COLOR gold] Musik[/COLOR][/B]"
-	version="3.0.0"
+	version="3.0.1"
 	provider-name="Team Titan Nebelkind,mr-evil1">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -35,7 +35,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="de">[COLOR skyblue]Musik[/COLOR][COLOR gold]Tube[/COLOR]</summary>
-    <description lang="de">Musiksammlung</description>
+    <description lang="de">Meine eigene Musiksammlung. Alle Playlisten sind auf Youtube verfÃ¼gbar. und wird mit kommenden Updates erweitert!</description>
     <platform>all</platform>
     <forum></forum>
     <source></source>

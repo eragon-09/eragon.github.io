@@ -1091,7 +1091,9 @@ provider-name="jurialmunkey">
 - Improve logging of client ID
 - Fix possible exception that may occur if video thumbnails fail to update
 - Fix unsubscribing from My Subscriptions
-- Fix folders for channel shorts and live stream</news></extension>
+- Fix folders for channel shorts and live stream
+     </news>
+  </extension>
 </addon>
 
 <addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.2">

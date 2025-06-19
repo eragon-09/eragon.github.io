@@ -783,7 +783,7 @@ provider-name="The Cleaner">
 </addon>
 
 <addon id="plugin.video.themoviedb.helper"
-version="6.9.1"
+version="6.9.4"
 name="TMDb Helper"
 provider-name="jurialmunkey">
 <requires>

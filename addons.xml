@@ -39,10 +39,10 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="de">Eragon Repository</summary>
   <description lang="de">[COLORsnow][B]** Weisheit der Drachen, sortiert und bereit, willkommen im [COLORred]E[COLORblue]ra[COLORyellow]gon[/COLOR][COLORsnow] Repository **[/B][/COLOR]
-[COLORred][B]Wichtig:[/B][/COLOR] Bitte beachten Sie, dass dieses Repository vertraulich ist und nicht im Internet verÃ¶ffentlicht werden sollte. Ihre RÃ¼cksichtnahme und Ihr VerstÃ¤ndnis sind entscheidend, um die IntegritÃ¤t unserer Arbeit zu wahren. Vielen Dank fÃ¼r Ihre Kooperation!
-
+[COLORred][B]Wichtig:[/B][/COLOR] Bitte beachten Sie, dass dieses Repository vertraulich ist und nicht im Internet veröffentlicht werden sollte. Ihre Rücksichtnahme und Ihr Verständnis sind entscheidend, um die Integrität unserer Arbeit zu wahren. Vielen Dank für Ihre Kooperation!
+   
   </description>
-  <disclaimer lang="de">Bitte, die Repository nicht verÃ¶ffentlichen.</disclaimer>
+  <disclaimer lang="de">Bitte, die Repository nicht veröffentlichen.</disclaimer>
   <assets>
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>

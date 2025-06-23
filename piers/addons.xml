@@ -611,6 +611,371 @@
     </extension>
 </addon>
 
+<addon id="plugin.program.autowidget" name="AutoWidget" version="3.7.0" provider-name="drinfernoo">
+    <requires>
+        <import addon="script.module.pil" />
+        <import addon="script.module.six" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>executable video music</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="service.py" />
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="context_add.py">
+                <label>$ADDON[plugin.program.autowidget 30003]</label>
+                <visible>String.IsEqual(Window(10000).Property(context.autowidget),true)</visible>
+            </item>
+            <item library="context_refresh.py">
+                <label>$ADDON[plugin.program.autowidget 30006]</label>
+                <visible>String.Contains(ListItem.FolderPath, plugin://plugin.program.autowidget)</visible>
+            </item>
+			<item library="context_refresh_single.py">
+                <label>$ADDON[plugin.program.autowidget 30046]</label>
+                <visible>!String.IsEmpty(ListItem.Property(autoID)) + [!String.IsEqual(ListItem.Property(autoAction),static) + !String.IsEqual(ListItem.Property(autoAction),merged)]</visible>
+            </item>
+			<item library="clear_cache_single.py">
+                <label>$ADDON[plugin.program.autowidget 30116]</label>
+                <visible>!String.IsEmpty(ListItem.Property(autoCache))</visible>
+            </item>
+        </menu>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">Automatically changes out widgets</summary>
+        <description lang="en_GB">Automatically changes out widgets on the homescreen for a more interesting browsing experience.</description>
+	<summary lang="es_ES">Cambia los widgets automáticamente</summary>
+	<description lang="es_ES">Cambia los widgets en la pantalla de inicio automáticamente para una experiencia de navegación más interesante.</description>
+	<platform>all</platform>
+        <license>LGPL-3.0</license>
+        <website>https://www.github.com/drinfernoo/</website>
+        <source>https://www.github.com/drinfernoo/plugin.program.autowidget/</source>
+        <news>
+3.7.0
+ - Optimize caching for performance and reliability
+ - Fix direct shortcuts
+ - Fix Settings Shortcuts for dependency add-ons
+3.6.1
+ - Fix playing direct shortcuts for some items
+ - Fix cache clearing again
+3.6.0
+ - Convert all file and path handling to xbmcvfs
+ - Add more feedback and granular controls during backup/restore
+3.5.1
+ - Fix sorting bug with higher group counts
+3.5.0
+ - Allow bulk operations in some groups
+ - More informative dialogs
+ - Allow manually sorting groups in "My Groups"
+ - Fixes for direct shortcuts
+ - Update "version" attribute in metafiles when updating
+3.4.2
+ - Some fixes for constant notification
+3.4.1
+ - Fix clearing cache from settings
+3.4.0
+ - Rework caching mechanism
+ - Add more notifications of progress
+ - Add placeholder items when no content is loaded
+3.3.7
+ - Delay widget updates during library scans or when in media views
+ - Fix widget cleaning scan for skins which don't use Skin Shortcuts
+ - Fix refreshing widgets created before 3.3.0
+ - Add more content type choices in editor dialog
+3.3.6
+ - Fix "Next Page" for Python 2.7
+3.3.5
+ - Better handling of error and empty states
+ - Better handling of "Next Page" items
+ - Fix "Active Widgets" menu
+ - Delay library updates when inside media views
+3.3.4
+ - Fix "Next Page" localizations
+3.3.3
+ - Fix "Clear Cache"
+3.3.2
+ - Fix bug when paths return no items
+3.3.1
+ - Fix bug when Skin Shortcuts is not installed
+ - More improvements to page item handling
+3.3.0
+ - Add "Copy Group" in group context menu
+ - Add "Create New ... Group" in "My Groups" menu
+ - Add "Clear Cache" in "Tools" menu
+ - Add "Refresh Widget" to widget context menu
+ - Add "Clear Cache" to widget context menu
+ - Add rudimentary error item for failed widgets
+ - Add "Icon Packs" for library widgets from genres, studios, and countries
+ - Remove dependency on Kodi Six
+ - Allow editing content type
+ - Allow Cycling Widgets to pull from a subset of paths
+ - Support cast thumbnails for Kodi N
+ - Fix translatePath reference again
+ - Faster and more robust item creation
+ - Make `.widget` files much simpler
+ - Better support for library paths
+ - Better support for music
+3.2.3
+ - Add English (US) and Portugese localizations
+3.2.2
+ - Add more localizations
+ - Better "Next Page" detection
+ - Support for "Next Page" items in other languages
+3.2.1
+ - Fix for items with no artwork
+3.2.0
+ - Add setting to prefer episodes/shows when removing duplicates
+ - Rework duplicate removal
+ - Fix bug in Active Widgets editor dialog
+ - Fix landscape art for some items
+ - Fix paged widgets not resetting on boot
+ - Format with black
+3.1.9
+ - Fix error with translatePath
+3.1.8
+ - Fix resume progress on items
+3.1.7
+ - Fix widget cleaning
+ - Fix Active Widgets menu
+3.1.6
+ - Fix detection of JSON-RPC version
+3.1.5
+ - Fix editor dialog
+3.1.4
+ - Fix settings shortcuts
+ - Fix some Unicode errors
+ - Fix some dialog labels in editor
+3.1.3
+ - Fix hashing in Matrix
+3.1.2
+ - Fix "Clear Cache"
+3.1.1
+ - Fixes for cache mechanism
+ - Add "Force Refresh Widgets" to context menu for AutoWidget items
+3.1.0
+ - Improved background caching for paths that change frequently
+ - Fix unneeded refreshes
+ - Fix caching on merged widgets
+ - Fix more Unicode errors
+3.0.2
+ - Fix bug in background caching
+3.0.1
+ - Fix bug when adding paths
+3.0.0
+ - Huge speed improvements thanks to @djay's background caching implementation
+ - Fix merged widget duplicate removal
+2.3.7
+ - Unicode fixes
+ - Fix method calls
+ - Fix separator in menus
+ - Fix logging in Kodi 19
+ - Update Spanish translation
+2.3.6
+ - Fix separator in shortcut groups
+2.3.5
+ - Fix various shortcut- and refresh-related bugs
+ - Fix error when path contained no items
+ - Add more debug logging
+ - Add widget ID as ListItem property (autoID)
+ - Reduce library updates (again)
+2.3.4
+ - Fix logging error
+2.3.3
+ - Fix shortcuts to Android apps
+2.3.2
+ - Fix error in debug logging logic
+2.3.1
+ - Fix editing and adding new groups
+ - Overall cleanup
+ - Trim as many library updates as possible
+2.3.0
+ - Huge simplification of plugin paths
+ - Speed improvements
+ - Better detection for "Next Page" items in various add-ons
+ - Add dedicated debug log
+ - Allow 'path' to be editing for static widgets
+2.2.0
+ - Reduce library updates to improve overall speed
+ - Sort "Active Widgets" by most recently refreshed
+ - Fix any straggling widget errors, I hope :D
+2.1.6
+ - Fix "Next Page" error
+2.1.5
+ - Fix non-merged paths :D
+2.1.4
+ - Support more add-ons' "Next Page" items
+ - Fix merged paths
+2.1.3
+- Fixes for Unicode characters in path labels
+- Fix for viewing groups in Kodi 17.x
+- Change "Icon Color" to a per-path basis
+2.1.2
+ - Add per-widget icon color
+2.1.1
+ - Fix "Icon Color"
+2.1.0
+ - New artwork for add-on
+ - Add icon coloring
+ - Improved "Active Widgets" menu
+ - Added "Clean Old Widget Files" shortcut in Tools
+ - Fix shortcut paths
+ - Fix missing InfoLabels
+2.0.2
+ - Make artwork for groups and paths more consistent
+2.0.1
+ - Add "Toggle Skin Debugging" shortcut
+2.0.0
+ - Rewrite most of add-on functions
+ - Add "Static Path" option
+ - Add "Merged Path" option
+ - Add "Paged Widgets"
+ - Revamp editor dialog
+ - More complete skin compatibility
+ - More miscellaneous fixes
+1.6.8
+ - Add setting for notification sound
+1.6.7
+ - Fix crash when window cannot be detected. Notably fixes Disney+ support.
+1.6.6
+ - Fix extract location
+1.6.5
+ - Add backup/restore features
+1.6.4
+ - Fix more rogue refreshes
+ - Fix wording in Spanish translation (again, thanks to @roliverosc)
+1.6.3
+ - Update settings localizations
+1.6.2
+ - Fix bug that caused Skin Shortcuts to not be able to rebuild the skin
+1.6.1
+ - Fix bug with shortcut widgets being "converted"
+1.6.0
+ - Android App shortcut support (thanks to @Sandmann79)
+ - Add Spanish translation (thanks to @roliverosc)
+ - Fix bug with empty action nodes
+ - Reduce refreshes
+ - Prettify .props file output
+1.5.5
+ - Fix regex for labels in some skins
+1.5.4
+ - Fix recursion crash during refresh
+1.5.3
+ - Fix indent error
+1.5.2
+ - Fix shortcut calls for YouTube
+1.5.1
+ - Fix error in editor dialog
+ - Fix changelog
+1.5.0
+ - Add "Active Widgets" menu
+ - Consistency fixes during initialization and refresh
+ - Allow adding playable items as shortcuts
+ - Fix crashes in Krypton
+ - Fix crashes from invalid group/widget files
+ - Fix Unicode compatibility
+1.4.5
+ - Refresh Shortcut widgets Automatically
+ - Add "Next Path" widget action
+ - Add "Clone" and "Explode" widget modes
+ - Allow refreshing between 15m-2h, at 15m intervals
+1.4.3
+ - Add context menu on more items
+ - Fix some log spam
+ - Catch more errors from invalid files
+ - Fix "Settings" shortcuts
+ - Gracefully handle remote artwork
+ - Use special paths for artwork
+1.4.2
+ - Fix bug in conversion
+1.4.1
+ - Fix bug in migration
+1.4.0
+ - Add "Clean Old References" shortcuts
+ - Change main menu layout
+1.3.9
+ - Fix label bug in Embuary (and maybe elsewhere)
+1.3.8
+ - Add "Wipe Add-on Data" shortcuts
+ - Allow Unicode characters in labels
+1.3.7
+ - Fix typo in path handling
+1.3.6
+ - Fix error handling
+1.3.5
+ - Add extra error checking for file operations
+1.3.4
+ - Add proper migration from old JSON to current
+1.3.3
+ - Rewrite editor dialog
+ - Fix path conversion for skin string paths
+1.3.2
+ - Fixes and cleanup in editor dialog
+1.3.1
+ - Cleanup skin string conversion
+1.3.0
+ - Add group editing dialog
+ - Non-Skin Shortcuts skin support
+ - Fix issues with groups and paths with the same name
+ - Fix settings shortcuts
+ - Add rudimentary JSON migration
+1.2.5
+ - Update some skin localizations
+ - Add more widget artwork
+ - Update documentation
+1.2.3
+ - Fix paths made from add-on browser
+ - Add ability to set plot
+1.2.2
+ - Fix group dialog calls
+1.2.1
+ - Fix imports
+1.2.0
+ - Better handling of art
+ - Better add-on art added
+ - Redesigned path addition dialog
+ - Settings shortcuts added
+1.1.2
+ - Add art editing for paths
+ - Add group renaming
+1.1.1
+ - Add setting to disable notification
+1.1.0
+ - Remove Skin Shortcuts dependency
+ - Expand context menu options
+ - Add support for skins with "basic" Skin Shortcuts integration
+ - Add setting to pause AutoWidget's service
+1.0.7
+ - Fix context menu option not showing
+1.0.6
+ - Fix paths not saving
+1.0.5
+ - Raise required Skin Shortcuts version to  1.0.19
+1.0.4
+ - Allow custom labels
+ - Add removal notifications
+1.0.3
+ - Fix shortcuts and widgets added from context menu
+1.0.2
+ - Fix crash from non-XML files
+1.0.1
+ - Fix crash from non-existent context menu setting
+1.0.0
+ - First stable release
+        </news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.png</fanart>
+            <poster>resources/media/poster.png</poster>
+            <banner>resources/media/banner.png</banner>
+            <clearlogo>resources/media/clearlogo.png</clearlogo>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.program.iptv.merge" name="IPTV Merge" provider-name="SlyGuy" version="0.28.6">
   <requires>
     <import addon="script.module.slyguy" version="0.85.92"/>
@@ -631,6 +996,36 @@
       <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
+</addon>
+
+<addon id="plugin.program.titansimpel" name="[COLOR orange]TITAN [COLOR red]BUILDS NO LIMITS[/COLOR][COLORsnow] Simple Wizard[/COLOR]" version="3.0.8" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">Titan Builds Simple Wizard</summary>
+		<description lang="de">[COLOR blue]Der [COLOR orange][B]TiTan[/COLOR] [COLOR red] Simple Wizard[/B][COLOR blue] ist ein spezialisierter Wizard für Kodi, der euch eine einfache und unkomplizierte Möglichkeit bietet, schnell verschiedene Builds zu installieren. Damit wird die Nutzung von Kodi noch benutzerfreundlicher und effizienter.[/COLOR]</description>
+		<disclaimer lang="en_GB"></disclaimer>
+		<language>en</language>
+		<platform>all</platform>
+		<license>GPL-2.0-or-later</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<news></news>
+		<assets>
+				<icon>resources/icon.png</icon>
+				<fanart>resources/fanart.jpg</fanart>
+				<banner></banner>
+				<clearlogo></clearlogo>
+				<screenshot></screenshot>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="plugin.program.truncatetables"
@@ -722,6 +1117,55 @@ provider-name="The Cleaner">
             <icon>icon.png</icon>
         </assets>
     </extension>
+</addon>
+
+<addon id="plugin.video.filmfriend" name="Filmfriend.de" version="1.0.0" provider-name="sarbes">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.libmediathek4" version="1.0.0"/>
+		<import addon="script.module.requests" version="2.19.1"/>
+		<import addon="inputstream.adaptive" version="2.5.4"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+		<language>en de fr</language>
+		<license>GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=353903</forum>
+		<source>https://github.com/sarbes/plugin.video.filmfriend</source>
+        <website>https://www.filmfriend.de/</website>
+        <summary lang="en_GB">This video add-on provides access to shows and movies of Filmfriend.de.</summary>
+        <description lang="en_GB">This video add-on provides access to shows and movies of Filmfriend.de. A valid library account is reqired in order to use this add-on.</description>
+        <summary lang="de_DE">Dieses Add-on bietet Zugriff auf Filme und Serien von Filmfriend.de.</summary>
+        <description lang="de_DE">Dieses Add-on bietet Zugriff auf Filme und Serien von Filmfriend.de. Ein Bibliotheksaccount ist zur Nutzung dieses Dienstes nötig.</description>
+        <disclaimer lang="de_DE">Dieses Add-on ist inoffiziell.</disclaimer>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.jetproxy" version="1.0.3.e" name="JetProxy" provider-name="t4ils">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.routing"/>
+  <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.service" library="service.py" />
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">JetProxy</summary>
+  <description lang="en_GB">JetProxy</description>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
 </addon>
 
 <addon id="plugin.video.nebelkindmusic"
@@ -1094,6 +1538,25 @@ provider-name="jurialmunkey">
 - Fix folders for channel shorts and live stream
      </news>
   </extension>
+</addon>
+
+<addon id="repository.autowidget" name="AutoWidget Repository" version="1.1" provider-name="drinfernoo">
+    <extension point="xbmc.addon.repository" name="AutoWidget Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/drinfernoo/plugin.program.autowidget/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/drinfernoo/plugin.program.autowidget/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/drinfernoo/plugin.program.autowidget/repo/zips/</datadir>
+        </dir>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>AutoWidget</summary>
+        <description>The official home of AutoWidget.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.2">
@@ -1477,6 +1940,56 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
+<addon id="script.autoruns"
+       name="Autoruns"
+       version="2.0.4"
+       provider-name="fight night, Jon Bovi">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+		<source>https://github.com/fightnight/fightnight-addons/tree/master/script.autoruns</source>
+		<summary lang="en">Disable startup services on Kodi</summary>
+		<summary lang="pt">Desactive serviços do arranque no Kodi</summary>
+		<description lang="en">You can disable startup services, improving Kodi internal speed.</description>
+		<description lang="pt">Pode desactivar serviços do arranque, melhorando a velocidade interna do Kodi.</description>
+		<disclaimer lang="en">Opensource addon not endorsed with Team Kodi.</disclaimer>
+		<disclaimer lang="pt">Addon opensource não afliado com a Equipa Kodi.</disclaimer>
+		<assets>
+				<icon>icon.png</icon>
+		</assets>
+    </extension>
+</addon>
+
+<addon id="script.colorbox" name="colorbox Script" version="3.0.0" provider-name="BADMS, Angelinas">
+	<requires>
+		<import addon="xbmc.python" version="3.0.1"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+	    <summary lang="en_GB">Image manipulator and colour matching tools</summary>
+		<description lang="en_GB">Provides image tools for skinners</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/</forum>
+		<source>https://github.com/BADMS/script.colorbox</source>
+		<email>philipkdick@gmail.com</email>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/fanart.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.73" provider-name="elgatito">
     <requires>
         <import addon="xbmc.addon" version="16.0.0" />
@@ -1666,6 +2179,37 @@ provider-name="jurialmunkey">
 
 </addon>
 
+<addon id="script.module.jetextractors" name="JetExtractors" version="3.1.5" provider-name="THE TEAM">
+	<requires>
+		<import addon="script.module.requests" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.dateutil" />
+		<import addon="script.module.soupsieve" />
+		<import addon="script.module.pyairtable" />
+		<import addon="script.module.pyamf" />
+		<import addon="script.module.pycryptodome" optional="true" />
+		<import addon="script.module.pyjsparser" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Jet Extractors</summary>
+		<description lang="en">Jet Extractors</description>
+		<disclaimer lang="en"></disclaimer>
+		<license>MIT</license>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<!-- ########################################### -->
+<!-- #     GIVE CREDIT WHERE CREDIT IS DUE     # -->
+<!-- #                                         # -->
+<!-- #      THE TEAM JETEXTRACTOR              # -->
+<!-- ########################################### -->
+
 <addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.2.28">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -1846,6 +2390,26 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.3" provider-name="marcelveldt,sualfred and others">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+		<description lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<platform>all</platform>
+		<license>GPL-2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.skinshortcuts" name="Skin Shortcuts" version="2.0.3" provider-name="BigNoid, marcelveldt, SiLVO, anxdpanic">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -1897,6 +2461,54 @@ provider-name="jurialmunkey">
         <description lang="sv_SE">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
         <description lang="zh_CN">皮肤加载项，提供简单的用户快捷方式管理和列表（需要皮肤支持）</description>
         <description lang="zh_TW">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+    </extension>
+</addon>
+
+<addon id="script.skinswitcher"
+	     name="Skin Switcher"
+	     version="1.0.2"
+	     provider-name="Surfacingx, OpenELEQ, Fire TV Guru, X">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+	</assets>
+    <summary lang="en">-</summary>
+    <description lang="en">Choose a skin.</description>
+    <disclaimer lang="en">.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  </extension>
+</addon>
+
+<addon id="script.toolbox" name="ToolBox Script" version="2.0.1" provider-name="phil65,sualfred">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.pil" version="1.1.7"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <language/>
+        <summary lang="en_GB">ToolBox Script</summary>
+        <description lang="en_GB">This script exposes several python functions to the UI engine as well as some other stuff to make life for skinners a bit easier.</description>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=207618</forum>
+        <source>https://github.com/phil65/script.toolbox</source>
+        <email>phil65@kodi.tv</email>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
     </extension>
 </addon>
 

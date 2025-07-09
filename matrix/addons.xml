@@ -1037,7 +1037,7 @@ KUDOS:
   </extension>
 </addon>
 
-<addon id="plugin.program.titansimpel" name="[COLOR orange]TITAN [COLOR red]BUILDS NO LIMITS[/COLOR][COLORsnow] Simple Wizard[/COLOR]" version="3.0.8" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
+<addon id="plugin.program.titansimpel" name="[COLOR orange]TITAN [COLOR red]BUILDS NO LIMITS[/COLOR][COLORsnow] Simple Wizard[/COLOR]" version="3.0.9" provider-name="[COLOR red]Ti[/COLOR][COLORdarkgrey]Tan[/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 	</requires>
